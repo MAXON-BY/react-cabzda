@@ -9,21 +9,7 @@
   grid-template-columns: 2fr 10fr;
 }
 
-.header{
-  grid-area: h;
-  background-color: green;
-}
-.header img{
-  height: 100%;
-  display: block;
-}
-
-.nav{
-  grid-area: n;
-  background-color: #f16051;
-}
-
-.content{
+.content-wrapper{
   grid-area: c;
   background-color: #5bc0de;
 }
