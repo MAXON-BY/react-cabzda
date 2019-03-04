@@ -2,3 +2,14 @@
     grid-area: n;
     background-color: #f16051;
 }
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+}
+.nav ul li a{
+    text-decoration: none;
+}
+.item a.active{
+    color: gold;
+}

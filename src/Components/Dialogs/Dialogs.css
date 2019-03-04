@@ -1,0 +1,22 @@
+.dialogsWrap{
+    display: flex;
+}
+.dialogUsers{
+    min-width: 200px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.dialogUsers li{
+    font-size: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.dialogUsers li a{
+    text-decoration: none;
+}
+.dialogUsers li:hover a,
+.dialogUsers li.active a{
+    color: gold;
+    font-size: 16px;
+    font-weight: bold;
+}
