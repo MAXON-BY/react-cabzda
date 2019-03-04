@@ -4,12 +4,14 @@ import ProfileInfo from './ProfileInfo/ProfileInfo.js'
 import MyPosts from './MyPosts/MyPosts.js'
 
 const Profile = () => {
+
     return(
+
         <div>
             <ProfileInfo />
-            <MyPosts />
+            <MyPosts/>
         </div>
     )
-}
+};
 
 export default Profile;

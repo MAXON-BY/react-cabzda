@@ -8,7 +8,7 @@ const ProfileInfo = () => {
                     src="https://uguide.ru/_nw/1/s58303849.jpg"
                     alt=""/>
             </div>
-            <div>
+            <div className="desriptionBlock">
                 ava + description
             </div>
         </div>
