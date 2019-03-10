@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
@@ -20,7 +20,10 @@ const App = (props) => {
                 <div className='content-wrapper'>
                     <Route exact path='/'
                            render={ () => <Profile
-                               state={props.vasia.profilePage}/>}
+                               profilePage={props.vasia.profilePage}
+                               addPost={props.addPost}
+                               updateNewPostText={props.updateNewPostText}
+                           />}
                     />
                     <Route path='/dialogs'
                            render={ () => <Dialogs
