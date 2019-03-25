@@ -1,4 +1,8 @@
-let store = {
+import { createStore} from 'redux'
+
+const store = createStore();
+
+let store_s = {
     _state: {
         profilePage: {
             postData: [
