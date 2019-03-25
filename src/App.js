@@ -15,7 +15,7 @@ const App = (props) => {
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header />
-                <Navbar />
+                <Navbar friendList={props.vasia.sidebar}/>
 
                 <div className='content-wrapper'>
                     <Route exact path='/'
@@ -25,12 +25,9 @@ const App = (props) => {
                                updateNewPostText={props.updateNewPostText}
                            />}
                     />
-                    <Route path='/dialogs'
-                           render={ () => <Dialogs
-                               state={props.vasia.dialogsPage}/>}
-                    />
+                    <Route path='/dialogs' render={ () => <Dialogs state={props.vasia.dialogsPage}/>}/>
                     <Route path='/music' component={Music}/>
-                    <Route path='/news' component={News}/>
+                    <Route path='/news' render={ ()=> <News newws ={props.vasia.newsPage}/>}/>
                     <Route path='/settings' component={Settings}/>
                 </div>
             </div>

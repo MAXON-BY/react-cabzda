@@ -1,4 +1,4 @@
-.nav{
+.sidebar{
     grid-area: n;
     background-color: #f16051;
 }
@@ -9,7 +9,33 @@
 }
 .nav ul li a{
     text-decoration: none;
+    font-size: 20px;
 }
+.item a:hover,
 .item a.active{
     color: gold;
+}
+.sidebar .friends{
+    padding-top: 30px;
+}
+.friends ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+}
+.friends ul li{
+    padding: 5px;
+}
+.friends ul li div{
+    text-align: center;
+}
+.friends ul li img{
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.friends ul li p{
+    text-align: center;
+    margin: 3px;
 }

@@ -1,5 +1,5 @@
 let store = {
-    _state : {
+    _state: {
         profilePage: {
             postData: [
                 {id: 1, message: 'First Post', likesCount: 15},
@@ -26,15 +26,32 @@ let store = {
                 {id: 10, name: 'Gopnik'},
             ]
         },
-        sidebar: {}
+        newsPage: {
+            newss: [
+                {id: 1, title: 'News #1', text: 'Text News for #1'},
+                {id: 2, title: 'News #2', text: 'Text News for #2'},
+                {id: 3, title: 'News #3', text: 'Text News for #3'},
+                {id: 4, title: 'News #4', text: 'Text News for #4'}
+            ]
+        },
+        sidebar: {
+            friends: [
+                {id: 1, friend: 'Alex', avaSrc: 'https://loremflickr.com/70/70?random=1'},
+                {id: 2, friend: 'Lias', avaSrc: 'https://loremflickr.com/70/70?random=2'},
+                {id: 3, friend: 'Lack', avaSrc: 'https://loremflickr.com/70/70?random=3'},
+                {id: 4, friend: 'Mary', avaSrc: 'https://loremflickr.com/70/70?random=4'},
+                {id: 5, friend: 'John', avaSrc: 'https://loremflickr.com/70/70?random=5'},
+                {id: 6, friend: 'Kate', avaSrc: 'https://loremflickr.com/70/70?random=6'},
+            ]
+        },
     },
-    getState(){
+    getState() {
         return this._state
     },
-    _rerendeerEntireTree () {
+    _rerendeerEntireTree() {
         console.log('State change')
     },
-    addPost () {
+    addPost() {
         let newPost = {
             id: 5,
             message: this._state.profilePage.newPostText,
@@ -44,13 +61,13 @@ let store = {
         this._state.profilePage.postData.newPostText = '';
         this._rerendeerEntireTree(this._state);
     },
-    updateNewPostText (newText) {
+    updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText;
         this._rerendeerEntireTree(this._state);
     },
     subscribe(observer) {
         this._rerendeerEntireTree = observer;
-    }
+    },
 };
 
 window.store = store;
